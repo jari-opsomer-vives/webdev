@@ -131,3 +131,23 @@ footer {
     border-top-right-radius: 16px;
     box-shadow: 0 -2px 6px rgba(21, 101, 192, 0.07);
 }
+
+.labo-btn.verslag-btn {
+    display: inline-block;
+    margin-bottom: 1.5rem; /* Meer ruimte onder de PDF-knop */
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem; /* Voor een goed contrast met de lijst of tekst */
+}
+
+.labo-opdrachten {
+    padding-left: 1.25rem; /* Iets inspringen van de lijst */
+    margin-top: 0;
+}
+
+section p {
+    margin-top: 0;
+    margin-bottom: 1rem; /* Ruimte onder tekst */
+}
