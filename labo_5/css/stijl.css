@@ -1,0 +1,36 @@
+/* Styling voor alle hoofdingen */
+h1, h2, h3 {
+    font-family: Arial;
+}
+
+/* Specifieke groottes per hoofding */
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+/* Styling voor alle paragrafen */
+p {
+    font-family: 'Times New Roman';
+    font-size: 1.2em;
+}
+
+/* Specifieke kleuren via classes */
+.rood {
+    color: red;
+}
+
+.groen {
+    color: green;
+}
+
+.blauw {
+    color: blue;
+}
