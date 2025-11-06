@@ -1,0 +1,19 @@
+/*VOOR:*/
+
+/*.menuitem {*/
+/*    display:inline-block;*/
+/*    width:150px;*/
+/*}*/
+/*.menuitem > a {*/
+/*    color:red;*/
+/*}*/
+
+/*NA:*/
+
+ul a {
+    color:red;
+    display:inline-block;
+    width:150px;
+}
+
+

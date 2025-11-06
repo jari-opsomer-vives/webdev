@@ -1,0 +1,12 @@
+.outer {
+    background-image: url('../images/Mooie-natuur-Europa.png'); /* foto als achtergrond */
+    background-size: cover; /* foto volledig bedekken */
+    background-position: center;
+    padding: 20px;
+}
+
+.inner {
+    border: 2px solid black; /* kader */
+    background: rgba(255, 255, 255, 0.8); /* lichte achtergrond om tekst leesbaar te houden */
+    padding: 10px;
+}

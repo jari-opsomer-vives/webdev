@@ -1,0 +1,75 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.1em;
+    background-color: #C0C0C0; /* zilverachtig */
+    color: #00106d;            /* donkerblauw */
+}
+
+h1 {
+    font-variant: small-caps;
+    background-color: #FF0000; /* knalrood */
+    padding: 12px;
+}
+
+a {
+    color: #0049d7;
+    text-decoration: underline;
+    transition: box-shadow 0.2s, border 0.2s;
+}
+
+a:hover {
+    box-shadow: 0 0 5px #555;
+    border: 2px solid #FF0000;
+    padding: 2px 6px;
+    background-color: #ECECEC;
+    border-radius: 6px;
+}
+
+.stippeltjesrand {
+    border: 1px dotted #003399;
+    padding: 6px;
+    margin: 5px 0;
+}
+
+/* Vervang 'images/icon-link.svg' door jouw afbeeldingspad */
+a.link-icon {
+    display: inline-block;           /* maakt padding en background betrouwbaar */
+    background-image: url("../images/icon-bij-een-link.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1em 1em;        /* icoongrootte; pas aan naar smaak */
+    padding-left: calc(1em + 0.5rem);/* ruimte voor het icoon + kleine marge */
+    line-height: 1;                  /* voorkomt verticale verschuiving */
+    vertical-align: middle;
+    text-decoration: none;           /* optioneel: eigen hover-variant maken */
+    color: inherit;                  /* behoud standaard kleur of zet je eigen kleur */
+}
+
+a.link-icon:hover,
+a.link-icon:focus {
+    text-decoration: underline;
+    outline: none;
+    filter: none;
+}
+
+ul.checklist {
+    list-style: none;       /* standaard bullets weg */
+    padding: 0;
+    margin: 0;
+}
+
+/* Niet aangevinkt */
+ul.checklist li {
+    background-image: url("../images/unchecked.png"); /* ☐ */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px;
+    padding-left: 30px;      /* ruimte voor icoon */
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Aangevinkt item */
+ul.checklist li.checked {
+    background-image: url("../images/checked.png"); /* ☑ */
+}
