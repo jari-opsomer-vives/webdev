@@ -35,8 +35,8 @@ td {
     color: #999;
 }
 /* Weekends: zondag (eerste kolom) en zaterdag (laatste kolom) */
-tr td:first-child:not(.buitenmaand),
-tr td:last-child:not(.buitenmaand) {
+tr td:first-child:not(.buitenmaand, .feestdag),
+tr td:last-child:not(.buitenmaand, .feestdag) {
     background: rgb(255,220,220);
 }
 /* Feestdagen (6, 25) */
