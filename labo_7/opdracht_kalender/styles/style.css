@@ -1,0 +1,47 @@
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+    font-family: sans-serif;
+}
+caption {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+th {
+    background: rgb(35,37,70);
+    color: rgb(200,190,240);
+    padding: 8px 15px;
+    text-align: center;
+    border: 1px dotted #888;
+}
+thead tr th {
+    background: rgb(170,170,200);
+    color: black;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    border: none;
+}
+td {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 1px dotted #888;
+    font-size: 1.17em;
+    background: white;
+}
+/* Dagen van vorige/volgende maand */
+.buitenmaand{
+    background: #ddd;
+    color: #999;
+}
+/* Weekends: zondag (eerste kolom) en zaterdag (laatste kolom) */
+tr td:first-child:not(.buitenmaand),
+tr td:last-child:not(.buitenmaand) {
+    background: rgb(255,220,220);
+}
+/* Feestdagen (6, 25) */
+.feestdag {
+    background: rgb(250,120,120);
+    color: white;
+    font-weight: bold;
+}

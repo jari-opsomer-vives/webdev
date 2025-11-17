@@ -1,0 +1,33 @@
+.vriendentabel {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #36752D;
+    border-radius: 9px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.vriendentabel th {
+    background: #36752D;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.vriendentabel td {
+    padding: 10px;
+    color: #275420;
+    border-top: 1px solid #C6FFC2;
+}
+
+.vriendentabel tr:nth-child(even) {
+    background: #DFFFDE;
+}
+
+.alt td {
+    background: #DFFFDE;
+}
+
+.onbekend {
+    background: red;
+}
+
