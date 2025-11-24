@@ -1,0 +1,9 @@
+div {
+    width: 40%;
+    border: solid black 1px;
+    box-sizing: border-box;
+    /*margin-right: -4px;*/
+    display: inline-block;
+
+    margin: 0 10px;
+}
