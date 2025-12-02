@@ -1,0 +1,150 @@
+/* Basisopmaak voor het hele document */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Grid-lay-out voor de volledige pagina */
+.pagina {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Typografie koppen */
+.paginakop__titel,
+.paginakop__subtitel {
+    color: darkblue;
+    text-align: center;
+}
+
+.paginakop__titel {
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.paginakop__subtitel {
+    font-size: 2.4em;
+    margin-bottom: 0;
+}
+
+/* Koppen in de nieuws-zijkolom */
+.nieuws__titel {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Paginakop met achtergrondafbeelding en breedte over beide kolommen */
+.paginakop {
+    background-image: url(../images/bgsky3.jpg);
+    background-size: cover;
+    grid-column: span 2;
+    height: 200px;
+}
+
+/* Illustratie in de header, rechts zwevend zoals in het origineel */
+.paginakop__illustratie {
+    float: right;
+    position: relative;
+    bottom: 100px;
+    right: 25%;
+}
+
+/* Merklogo links van de inleiding */
+.merklogo {
+    float: left;
+    padding-top: 20px;
+}
+
+/* Inleidende tekst met accentspan in donkere kleur */
+.inleiding__accent {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* Zijkolom met nieuwsberichten */
+.nieuws {
+    border: 1px solid #999999;
+    background-color: #dddddd;
+    grid-column: 2;
+    box-sizing: border-box;
+}
+
+/* Hoofdinhoud (logo, inleiding en fotogalerij) in de eerste kolom */
+.hoofdinhoud {
+    grid-column: 1;
+    box-sizing: border-box;
+}
+
+/* Ondernavigatie en voettekst moeten over beide kolommen lopen */
+.paginavoet,
+.ondernav {
+    grid-column: span 2;
+}
+
+/* Ondernavigatie-gebied onderaan de pagina */
+.ondernav {
+    width: 100%;
+    background-color: #666666;
+    color: white;
+    line-height: 2em;
+}
+
+/* Blokken in de ondernavigatie naast elkaar */
+.ondernav__blok {
+    width: 200px;
+    margin-left: 120px;
+    display: inline-block;
+}
+
+/* Links in de ondernavigatie erven de tekstkleur */
+.ondernav a {
+    color: inherit;
+}
+
+/* Hoverkleur voor links in de ondernavigatie */
+.ondernav a:hover {
+    color: red;
+}
+
+/* Voettekst met gecentreerde tekst en witte achtergrond */
+.paginavoet__tekst {
+    text-align: center;
+    background-color: white;
+}
+
+/* Fotogalerij-achtergrond en wegnemen van witruimte tussen inline-blocks */
+.fotogalerij {
+    background-color: #999999;
+    line-height: 0;
+}
+
+/* Een individueel foto-item in de galerij */
+.fotogalerij__item {
+    display: inline-block;
+    border: 1px dotted white;
+    margin: 20px;
+}
+
+/* Werkelijke afbeelding binnen een foto-item */
+.fotogalerij__item img {
+    height: 180px;
+    width: 180px;
+    border: 10px solid white;
+    box-sizing: border-box;
+}
+
+/* Inleidende paragraaf: tekst uitvullen en float van het logo opvangen */
+.inleiding__tekst {
+    overflow: hidden;
+    text-align: justify;
+}
+
+/* Binnenmarges rond de inleidende sectie */
+.inleiding {
+    padding: 20px;
+}

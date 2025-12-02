@@ -1,0 +1,24 @@
+main{
+    font-family: Verdana, Geneva, Tahoma, Verdana, sans-serif;
+}
+
+h2{
+    margin-left: 10px;
+}
+
+article{
+    border: 2px solid;
+    margin-bottom: 20px;
+    height: 300px;
+    background-color: lightgray;
+}
+
+article:nth-child(odd) p img{
+    float: left;
+    margin: 10px;
+}
+
+article:nth-child(even) p img{
+    float: right;
+    margin: 10px;
+}

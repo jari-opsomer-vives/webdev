@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Airbus Webpagina</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+<!-- paginacontainer zorgt voor de grid-lay-out van de volledige pagina -->
+<div class="pagina">
+
+    <!-- paginakop met titel, subtitel en illustratie -->
+    <header class="paginakop">
+        <h1 class="paginakop__titel">AIRBUS - A380</h1>
+        <h2 class="paginakop__subtitel">Het grootste passagiersvliegtuig ter wereld</h2>
+        <img
+                class="paginakop__illustratie"
+                src="images/tekklein.png"
+                alt="Tekening van een Airbus A380"
+        >
+    </header>
+
+    <!-- hoofdinhoud: logo, inleiding en fotogalerij -->
+    <main class="hoofdinhoud">
+        <!-- merkblok met airbus-logo -->
+        <figure class="merklogo">
+            <img
+                    class="merklogo__afbeelding"
+                    src="images/airbus_logo.jpg"
+                    alt="Het logo van Airbus"
+            >
+        </figure>
+
+        <!-- inleidende tekst over het toestel -->
+        <section class="inleiding">
+            <p class="inleiding__tekst">
+                <b>De Airbus A380</b> is het grootste passagiersvliegtuig ter wereld. Het is
+                een product van het Europese concern Airbus. Het widebody-vliegtuig beschikt over twee
+                verdiepingen, waardoor het maximaal 853 passagiers kan herbergen. Bij een gemiddelde configuratie
+                passen er 555 personen in.
+                De eerste testvlucht werd gemaakt op 27 april 2005. Tweeënhalf jaar later, op 25 oktober 2007,
+                maakte de A380 haar eerste commerciële vlucht. In dienst van Singapore Airlines vloog de A380 van
+                Singapore naar Sydney.
+                <span class="inleiding__accent">
+                        Dit was eveneens de eerste route waarop een lijndienst door het toestel werd onderhouden.
+                    </span>
+                Anno april 2011 hebben vijf luchtvaartmaatschappijen 47 vliegtuigen van dit type in dienst.
+            </p>
+        </section>
+
+        <!-- fotogalerij met afbeeldingen van het toestel -->
+        <section class="fotogalerij" aria-label="Foto's van de Airbus A380">
+            <div class="fotogalerij__item">
+                <img src="images/A380Grond.JPG" alt="Foto van het vliegtuig op de grond">
+            </div>
+            <div class="fotogalerij__item">
+                <img src="images/Britischairways.JPG" alt="Airbus A380 in kleuren van British Airways">
+            </div>
+            <div class="fotogalerij__item">
+                <img src="images/binnen3.jpg" alt="Interieur van de Airbus A380">
+            </div>
+            <div class="fotogalerij__item">
+                <img src="images/cockpit.jpg" alt="Cockpit van de Airbus A380">
+            </div>
+            <div class="fotogalerij__item">
+                <img src="images/indelucht.jpg" alt="Airbus A380 tijdens de vlucht">
+            </div>
+            <div class="fotogalerij__item">
+                <img src="images/pasagiers.jpg" alt="Passagiers aan boord van de Airbus A380">
+            </div>
+            <div class="fotogalerij__item">
+                <img src="images/binnen1.jpg" alt="Interieur met zitplaatsen van de Airbus A380">
+            </div>
+            <div class="fotogalerij__item">
+                <img src="images/indelucht2.jpg" alt="Airbus A380 in de lucht">
+            </div>
+            <div class="fotogalerij__item">
+                <img src="images/abramovich.jpg" alt="Privé-uitvoering van de Airbus A380">
+            </div>
+        </section>
+    </main>
+
+    <!-- zijkolom met nieuwsfeitjes over de A380 -->
+    <aside class="nieuws">
+        <h3 class="nieuws__titel">Eerste vlucht</h3>
+        <p class="nieuws__tekst">
+            Het toestel maakte zijn eerste trans-Atlantische vlucht met passagiers op 19 maart 2007 tussen
+            Frankfurt am Main en New York.
+        </p>
+
+        <h3 class="nieuws__titel">Singapore</h3>
+        <p class="nieuws__tekst">
+            De eerste vijf A380 toestellen werden aan Singapore Airlines geleverd. Nadat in Toulouse het eerste
+            afgeleverde toestel op 15 oktober 2007 officieel aan Singapore Airlines overgedragen was, werd op 25
+            oktober de eerste commerciële vlucht uitgevoerd.
+        </p>
+
+        <h3 class="nieuws__titel">Qantas</h3>
+        <p class="nieuws__tekst">
+            Bij een A380 van Qantas (QF32) deed zich kort na het opstijgen van de luchthaven van Singapore een
+            "uncontained engine failure" voor waarbij er delen van de motor afvielen. Brokstukken van de
+            motorbehuizing vielen op het Indonesische eiland Batam. Er vielen geen gewonden.
+        </p>
+
+        <h3 class="nieuws__titel">Air France</h3>
+        <p class="nieuws__tekst">
+            Een Airbus A380 van Air France raakte tijdens het taxiën naar de startbaan op John F. Kennedy
+            International Airport met zijn vleugel de staart van een Bombardier CRJ700 van Comair.
+        </p>
+    </aside>
+
+    <!-- ondernavigatie met extra links -->
+    <nav class="ondernav">
+        <div class="ondernav__blok">
+            <ul class="ondernav__lijst">
+                <li>Manchester</li>
+                <li>Toulouse
+                    <ul class="ondernav__sublijst">
+                        <li>Main Building</li>
+                        <li>Wing Assembly</li>
+                        <li>Simulator</li>
+                    </ul>
+                </li>
+                <li>Frankfurt am Main</li>
+            </ul>
+        </div>
+
+        <div class="ondernav__blok">
+            <ul class="ondernav__lijst">
+                <li>Documentary</li>
+                <li>Aircrafts
+                    <ul class="ondernav__sublijst">
+                        <li><a href="http://www.airbus.com">A300 - A310</a></li>
+                        <li><a href="http://www.airbus.com">A330 - A340</a></li>
+                        <li><a href="http://www.airbus.com">A360</a></li>
+                    </ul>
+                </li>
+                <li>A380 - 800</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- voettekst met eenvoudige copyrightvermelding -->
+    <footer class="paginavoet">
+        <p class="paginavoet__tekst">&lt; &copy; Airbus A380 &gt;</p>
+    </footer>
+</div>
+</body>
+</html>
