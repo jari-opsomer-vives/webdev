@@ -1,0 +1,71 @@
+/* styles/style.css - MOBILE FIRST met Bootstrap overrides */
+:root {
+    --primary-gradient: linear-gradient(135deg, #409fff 0%, #6fb1fc 100%);
+}
+
+* {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.bg-gradient-custom {
+    background: var(--primary-gradient) !important;
+}
+
+.hobby-item {
+    transition: all 0.3s ease;
+    background: #f8f9ff;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(64, 159, 255, 0.2) !important;
+}
+
+.hobby-title::before {
+    font-size: 1.2em;
+    margin-right: 0.5rem;
+}
+
+.hobby-title.snowboarden::before { content: "🏂"; }
+.hobby-title.reizen::before { content: "✈️"; }
+.hobby-title.italiaans::before { content: "🍝"; }
+.hobby-title.ict::before { content: "💻"; }
+.hobby-title.muziek::before { content: "🎧"; }
+
+a {
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* MOBILE FIRST - Custom aanpassingen voor kleine schermen */
+@media (max-width: 576px) {
+    .display-3 { font-size: 2rem !important; }
+    .card-body { padding: 1.25rem !important; }
+    .hobby-item { padding: 1.25rem !important; }
+}
+
+/* Tablet aanpassingen */
+@media (min-width: 768px) {
+    .hobby-item { min-height: 200px; }
+}
+
+/* Desktop optimalisaties */
+@media (min-width: 1200px) {
+    .container { max-width: 1000px !important; }
+    .display-3 { font-size: 3.5rem !important; }
+}
+
+/* Print styles */
+@media print {
+    .card { box-shadow: none !important; border: 1px solid #ddd !important; }
+    .btn { display: none !important; }
+    .shadow-lg { box-shadow: none !important; }
+}

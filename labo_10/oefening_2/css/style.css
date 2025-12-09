@@ -1,0 +1,17 @@
+.tile {
+    width: 100%;
+    aspect-ratio: 1 / 1;      /* vierkant blok */
+    border-radius: 4px;
+}
+
+/* Kleurvarianten */
+.tile.light { background-color: #dde1e8; }
+.tile.dark  { background-color: #aeb4be; }
+
+/* Optioneel: extra spacing-tuning per breakpoint */
+@media (max-width: 767.98px) {   /* mobile */
+    .row.g-3 {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+    }
+}

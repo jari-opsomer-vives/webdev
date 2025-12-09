@@ -1,0 +1,19 @@
+.block {
+    width: 100%;
+    background-color: #dde1e8;
+    border-radius: 4px;
+    aspect-ratio: 5 / 2;  /* Geeft altijd dezelfde verhouding, bijv. 2.5:1 */
+    height: 100%;         /* Stretch om hoogte van kolom te vullen */
+}
+
+.block.dark {
+    background-color: #aeb4be;
+}
+
+/* Optioneel: iets kleinere tussenruimte op heel kleine schermen */
+@media (max-width: 575.98px) {
+    .row.g-3 {
+        --bs-gutter-x: 0.75rem;
+        --bs-gutter-y: 0.75rem;
+    }
+}
