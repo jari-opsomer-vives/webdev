@@ -1,0 +1,7 @@
+#color-box {
+    width: 150px;
+    height: 150px;
+    border: darkgray solid 2px;
+
+    border-radius: 20px;
+}
