@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Web Development 1 [V5R414]</title>
+    <title>Home – Web Development 1 [V5R414]</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-    <h1>Home • Web Development 1</h1>
+    <h1>Web Development 1</h1>
     <p>Hogeschool VIVES – Jari Opsomer</p>
 </header>
+
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -18,17 +20,98 @@
         <!-- Hier kan eventueel in de toekomst nog algemene navigatie bij -->
     </ul>
 </nav>
+
 <main>
-    <section>
-        <h2>Welkom!</h2>
-        <p>
-            Op deze pagina vind je algemene informatie over het vak Web Development 1.<br>
-            Gebruik de knop hierboven om naar het overzicht van alle labo's te gaan!
-        </p>
-    </section>
+
+    <!-- HERO -->
+    <div class="home-hero">
+        <span class="home-hero-label">B-VIV-V5R414 · 2025–2026</span>
+        <h2>Welkom bij Web Development 1</h2>
+        <p>Deze cursus leert je de basisprincipes van webontwikkeling met de nieuwste standaarden: HTML5, CSS3 en JavaScript. Na dit vak ben je in staat om zelf een professionele website of webapplicatie op te zetten.</p>
+        <div class="home-hero-actions">
+            <a href="labos.html" class="btn-hero-primary">Alle labo's →</a>
+            <!-- ↓ WIJZIG NUMMER EN LINK NAAR HET LAATSTE LABO -->
+            <a href="labo_15/index.html" class="btn-hero-ghost">⚡ Snel naar labo 15</a>
+        </div>
+    </div>
+
+    <!-- VAK INFO -->
+    <div class="info-grid">
+        <div class="info-card">
+            <div class="info-card-label">Opleiding</div>
+            <div class="info-card-value">Toegepaste Informatica</div>
+            <div class="info-card-sub">Bachelor – Hogeschool VIVES</div>
+        </div>
+        <div class="info-card">
+            <div class="info-card-label">Studiepunten</div>
+            <div class="info-card-value">6 studiepunten</div>
+            <div class="info-card-sub">Beide semesters · Nederlands</div>
+        </div>
+        <div class="info-card">
+            <div class="info-card-label">Lesgevers</div>
+            <div class="info-card-value">Debaere Pim (coördinator)</div>
+            <div class="info-card-sub">Colpaert Janiek &amp; N.</div>
+        </div>
+        <div class="info-card">
+            <div class="info-card-label">Werkvorm</div>
+            <div class="info-card-value">College · Practicum · Opdracht</div>
+            <div class="info-card-sub">Aanwezigheid labo's verplicht</div>
+        </div>
+    </div>
+
+    <!-- ONDERWERPEN -->
+    <div class="topics-card">
+        <h3>Inhoud van de cursus</h3>
+        <ul class="topics-list">
+            <li><span class="topic-num">01</span> Structureren van website-inhoud met HTML5 en semantische elementen</li>
+            <li><span class="topic-num">02</span> Vormgeving van websites met Cascading StyleSheets (CSS3)</li>
+            <li><span class="topic-num">03</span> Werken met een moderne ontwikkelingsomgeving</li>
+            <li><span class="topic-num">04</span> Gebruikersinteractie en dynamische inhoud met JavaScript</li>
+            <li><span class="topic-num">05</span> Responsive design – websites optimaliseren voor mobiele toestellen</li>
+        </ul>
+    </div>
+
+    <!-- EVALUATIE -->
+    <div class="eval-card">
+        <h3>Evaluatie</h3>
+        <div class="eval-bars">
+            <div class="eval-row">
+                <span class="eval-label">Examen januari (computer)</span>
+                <div class="eval-track"><div class="eval-fill fill-jan"></div></div>
+                <span class="eval-pct">40%</span>
+            </div>
+            <div class="eval-row">
+                <span class="eval-label">Examen juni (computer)</span>
+                <div class="eval-track"><div class="eval-fill fill-jun"></div></div>
+                <span class="eval-pct">45%</span>
+            </div>
+            <div class="eval-row">
+                <span class="eval-label">Permanente evaluatie</span>
+                <div class="eval-track"><div class="eval-fill fill-perm"></div></div>
+                <span class="eval-pct">15%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MEEST RECENTE LABO -->
+    <!-- ↓ WIJZIG NUMMER, TITEL EN LINK NAAR HET LAATSTE LABO -->
+    <a href="labo_15/index.html" class="latest-bar">
+        <div class="latest-bar-left">
+            <div class="latest-num">15</div>
+            <div>
+                <div class="latest-info-label">Meest recent</div>
+                <div class="latest-info-title">JavaScript – Deel 3</div>
+                <div class="latest-info-sub">Laatste toegevoegde labo</div>
+            </div>
+        </div>
+        <span class="badge-new">Bekijk →</span>
+    </a>
+
 </main>
+
 <footer>
     <p>&copy; 2025 Jari Opsomer, Hogeschool VIVES</p>
 </footer>
+
 </body>
 </html>

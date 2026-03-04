@@ -3,90 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labo's - Web Development 1 [V5R414]</title>
+    <title>Labo's – Web Development 1 [V5R414]</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
     <h1>Labo's • Web Development 1</h1>
-    <p>Overzicht van alle 'labo's & opdrachten' van Jari Opsomer</p>
+    <p>Overzicht van alle labo's en opdrachten – Jari Opsomer</p>
 </header>
+
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="labos.html">Labo's</a></li>
     </ul>
 </nav>
+
 <main>
     <section>
         <h2>Overzicht van alle labo's</h2>
-        <table class="labo-table">
-            <tr>
-                <td>Labo 1: Internet en HTTP</td>
-                <td><a class="labo-btn" href="labo_1/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 2: HTML - Deel 1</td>
-                <td><a class="labo-btn" href="labo_2/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 3: HTML - Deel 2</td>
-                <td><a class="labo-btn" href="labo_3/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 4: HTML - Deel 3</td>
-                <td><a class="labo-btn" href="labo_4/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 5: CSS - Deel 1</td>
-                <td><a class="labo-btn" href="labo_5/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 6: CSS - Deel 2</td>
-                <td><a class="labo-btn" href="labo_6/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 7: CSS - Deel 3</td>
-                <td><a class="labo-btn" href="labo_7/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 8: CSS - Deel 4</td>
-                <td><a class="labo-btn" href="labo_8/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 9: CSS - Deel 5</td>
-                <td><a class="labo-btn" href="labo_9/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 10: Responsive design</td>
-                <td><a class="labo-btn" href="labo_10/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 11: CSS - Grid</td>
-                <td><a class="labo-btn" href="labo_11/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 12: CSS - Flexbox</td>
-                <td><a class="labo-btn" href="labo_12/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 13: JavaScript - Deel 1</td>
-                <td><a class="labo-btn" href="labo_13/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 14: JavaScript - Deel 2</td>
-                <td><a class="labo-btn" href="labo_14/index.html">Bekijk labo</a></td>
-            </tr>
-            <tr>
-                <td>Labo 15: JavaScript - Deel 3</td>
-                <td><a class="labo-btn" href="labo_15/index.html">Bekijk labo</a></td>
-            </tr>
-            <!-- Voeg hier nieuwe rijen toe voor extra projecten -->
-        </table>
+
+        <!-- ════════════════════════════════════════════
+             HTML-GROEP
+             Labo toevoegen: kopieer een .labo-card-row,
+             pas nummer, titel en href aan.
+             Verplaats class "is-latest" naar de nieuwste rij.
+             ════════════════════════════════════════════ -->
+        <div class="labo-group">
+            <div class="labo-group-title" id="html">
+                <span class="group-dot dot-html"></span> HTML
+            </div>
+            <div class="labo-cards">
+                <a class="labo-card-row" href="labo_1/index.html">
+                    <span class="labo-card-num">01</span>
+                    <span class="labo-card-title">Internet en HTTP</span>
+                    <span class="labo-card-tag tag-html">HTML</span>
+                </a>
+                <a class="labo-card-row" href="labo_2/index.html">
+                    <span class="labo-card-num">02</span>
+                    <span class="labo-card-title">HTML – Deel 1</span>
+                    <span class="labo-card-tag tag-html">HTML</span>
+                </a>
+                <a class="labo-card-row" href="labo_3/index.html">
+                    <span class="labo-card-num">03</span>
+                    <span class="labo-card-title">HTML – Deel 2</span>
+                    <span class="labo-card-tag tag-html">HTML</span>
+                </a>
+                <a class="labo-card-row" href="labo_4/index.html">
+                    <span class="labo-card-num">04</span>
+                    <span class="labo-card-title">HTML – Deel 3</span>
+                    <span class="labo-card-tag tag-html">HTML</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════════
+             CSS-GROEP
+             ════════════════════════════════════════════ -->
+        <div class="labo-group">
+            <div class="labo-group-title" id="css">
+                <span class="group-dot dot-css"></span> CSS
+            </div>
+            <div class="labo-cards">
+                <a class="labo-card-row" href="labo_5/index.html">
+                    <span class="labo-card-num">05</span>
+                    <span class="labo-card-title">CSS – Deel 1</span>
+                    <span class="labo-card-tag tag-css">CSS</span>
+                </a>
+                <a class="labo-card-row" href="labo_6/index.html">
+                    <span class="labo-card-num">06</span>
+                    <span class="labo-card-title">CSS – Deel 2</span>
+                    <span class="labo-card-tag tag-css">CSS</span>
+                </a>
+                <a class="labo-card-row" href="labo_7/index.html">
+                    <span class="labo-card-num">07</span>
+                    <span class="labo-card-title">CSS – Deel 3</span>
+                    <span class="labo-card-tag tag-css">CSS</span>
+                </a>
+                <a class="labo-card-row" href="labo_8/index.html">
+                    <span class="labo-card-num">08</span>
+                    <span class="labo-card-title">CSS – Deel 4</span>
+                    <span class="labo-card-tag tag-css">CSS</span>
+                </a>
+                <a class="labo-card-row" href="labo_9/index.html">
+                    <span class="labo-card-num">09</span>
+                    <span class="labo-card-title">CSS – Deel 5</span>
+                    <span class="labo-card-tag tag-css">CSS</span>
+                </a>
+                <a class="labo-card-row" href="labo_10/index.html">
+                    <span class="labo-card-num">10</span>
+                    <span class="labo-card-title">Responsive Design</span>
+                    <span class="labo-card-tag tag-css">CSS</span>
+                </a>
+                <a class="labo-card-row" href="labo_11/index.html">
+                    <span class="labo-card-num">11</span>
+                    <span class="labo-card-title">CSS Grid</span>
+                    <span class="labo-card-tag tag-css">CSS</span>
+                </a>
+                <a class="labo-card-row" href="labo_12/index.html">
+                    <span class="labo-card-num">12</span>
+                    <span class="labo-card-title">CSS Flexbox</span>
+                    <span class="labo-card-tag tag-css">CSS</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ════════════════════════════════════════════
+             JAVASCRIPT-GROEP
+             ════════════════════════════════════════════ -->
+        <div class="labo-group">
+            <div class="labo-group-title" id="js">
+                <span class="group-dot dot-js"></span> JavaScript
+            </div>
+            <div class="labo-cards">
+                <a class="labo-card-row" href="labo_13/index.html">
+                    <span class="labo-card-num">13</span>
+                    <span class="labo-card-title">JavaScript – Deel 1</span>
+                    <span class="labo-card-tag tag-js">JS</span>
+                </a>
+                <a class="labo-card-row" href="labo_14/index.html">
+                    <span class="labo-card-num">14</span>
+                    <span class="labo-card-title">JavaScript – Deel 2</span>
+                    <span class="labo-card-tag tag-js">JS</span>
+                </a>
+                <!-- ↓ LAATSTE LABO: "is-latest" verplaatsen naar de nieuwe rij bij update -->
+                <a class="labo-card-row is-latest" href="labo_15/index.html">
+                    <span class="labo-card-num">15</span>
+                    <span class="labo-card-title">JavaScript – Deel 3</span>
+                    <span class="labo-card-tag tag-js">JS</span>
+                    <span class="badge-latest">Nieuwste</span>
+                </a>
+                <!-- Voeg hier nieuwe labo's toe ↓ -->
+            </div>
+        </div>
+
     </section>
 </main>
+
 <footer>
-    <p>&copy; 2025 Jari Opsomer, Hogeschool VIVES</p>
+    <p>&copy; 2026 Jari Opsomer, Hogeschool VIVES</p>
 </footer>
+
 </body>
 </html>
