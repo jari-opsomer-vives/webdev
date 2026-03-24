@@ -1,0 +1,82 @@
+/* Pagina gecentreerd */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Bovenste rij: kiezer + Save-knop naast elkaar */
+.kiezer-rij {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Kiezer: schuivers naast kleurvak */
+.kiezer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid darkgray;
+    border-radius: 20px;
+}
+
+/* Schuivers onder elkaar */
+.schuivers { display: flex; flex-direction: column; gap: 10px; }
+.schuivers > div { display: flex; flex-direction: row; justify-content: space-between; }
+.schuivers span { display: flex; width: 100px; justify-content: end; }
+
+/* Kleurvak */
+#kleurvak {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 128, 128); /* beginwaarde overeenkomstig schuivers */
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    transition: background-color 0.1s ease-in-out;
+}
+
+/* Save-knop rechts van de kiezer */
+#opslaan {
+    background-color: white;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Stalen raster onderaan */
+#stalen-vak {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+/* Enkel staal: rechthoekig (geen afronding) */
+.staal {
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+    border: 2px solid darkgray;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Verwijderknop rechtsboven op het staal */
+.verwijder {
+    position: absolute;
+    top: 0; right: 0;
+    background-color: red;
+    color: white;
+    border: none;
+    border-bottom: 2px solid darkgray;
+    border-left: 2px solid darkgray;
+    padding: 2px 6px;
+    font-size: 12px;
+    cursor: pointer;
+}

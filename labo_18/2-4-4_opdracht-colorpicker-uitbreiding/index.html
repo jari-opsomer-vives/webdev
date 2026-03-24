@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- Bovenste rij: kleurkiezer + Save-knop rechts -->
+    <div class="kiezer-rij">
+        <div class="kiezer">
+            <div class="schuivers">
+                <div><input type="range" id="rood"  min="0" max="255" value="255"><span>Rood  <span id="rood-waarde">255</span></span></div>
+                <div><input type="range" id="groen" min="0" max="255" value="128"><span>Groen <span id="groen-waarde">128</span></span></div>
+                <div><input type="range" id="blauw" min="0" max="255" value="128"><span>Blauw <span id="blauw-waarde">128</span></span></div>
+            </div>
+            <div id="kleurvak"></div>
+        </div>
+        <!-- Opslaan-knop rechts van de kiezer -->
+        <button id="opslaan">Save</button>
+    </div>
+
+    <!-- Stalen verschijnen hier onderaan -->
+    <div id="stalen-vak"></div>
+
+</div>
+<script src="scripts/code.js"></script>
+</body>
+</html>

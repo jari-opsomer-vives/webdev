@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tree Nodes Opdracht</title>
+</head>
+<body>
+
+<!-- Het HTML fragment met de paragraaf die id="abc" heeft -->
+<div>
+    <p id="abc">Dit is een test paragraaf. <span>Met een extra span element erin.</span></p>
+</div>
+
+<script>
+    // 1. Zoek de element node voor de paragraaf met id="abc"
+    const paragraaf = document.getElementById('abc');
+
+    // 2. We plaatsen een console.log zodat we hier makkelijk een breakpoint op kunnen zetten
+    console.log("De paragraaf node is opgehaald.");
+</script>
+
+</body>
+</html>
