@@ -1,0 +1,12 @@
+/* Het speelveld heeft een vaste grootte zodat het doelwit altijd binnen de rand blijft */
+#playField {
+    height: 600px;
+    width: 800px;
+    border: 1px solid black;
+}
+
+/* Ik gebruik position:absolute zodat ik het doelwit zelf kan positioneren
+   met left en top via JavaScript. */
+#target {
+    position: absolute;
+}

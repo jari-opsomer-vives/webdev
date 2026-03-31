@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>Matching game</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+<!-- Het speelveld: hier worden alle kaarten in geplaatst via JavaScript -->
+<div id="playField">
+</div>
+
+<!-- Geluidsbestanden die ik gebruik bij het omdraaien en controleren van kaarten -->
+<!-- preload="auto" zorgt dat de browser de geluiden al inlaadt voor ze nodig zijn -->
+<audio id="draai" preload="auto">
+    <source src="sound/draai.mp3" type="audio/mpeg">
+    <source src="sound/draai.wav" type="audio/wav">
+</audio>
+<audio id="goed" preload="auto">
+    <source src="sound/goed.mp3" type="audio/mpeg">
+    <source src="sound/goed.wav" type="audio/wav">
+</audio>
+<audio id="fout" preload="auto">
+    <source src="sound/fout.mp3" type="audio/mpeg">
+    <source src="sound/fout.wav" type="audio/wav">
+</audio>
+
+<!-- Ik laad het script op het einde zodat de HTML al bestaat als het script start -->
+<script src="script/code.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* Als het speelveld geblokkeerd is, verander ik de cursor naar een wachtcursor
+   zodat de speler weet dat hij even moet wachten */
+#playField.geblokkeerd {
+    cursor: wait;
+}
+
+/* Als het spel voorbij is, toon ik een "klaar"-afbeelding als achtergrond */
+#playField.klaar {
+    background-image: url(image/klaar.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Een vak is de container rondom elke kaart
+   Ik gebruik inline-block zodat vakken naast elkaar staan maar toch een breedte/hoogte hebben
+   overflow:hidden voorkomt dat de marge van .kaart buiten .vak uitsteekt (collapsing margins) */
+.vak {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 1px;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Elke kaart is even groot als zijn vak
+   box-sizing:border-box zorgt dat de border mee wordt opgenomen in de breedte/hoogte
+   zodat ik niet zelf +2px hoef te rekenen */
+.kaart {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* Achterkant van een kaart: lichtgrijs */
+.kaart.achterkant {
+    background-color: lightgray;
+}
+
+/* Als ik over een achterkant hover, wordt ze zwart
+   zo ziet de speler welke kaart hij gaat omdraaien */
+.kaart.achterkant:hover {
+    background-color: black;
+}
+
+/* Voorkant van een kaart: zwarte achtergrond (de afbeelding staat erop) */
+.kaart.voorkant {
+    background-color: black;
+}
+
+/* Als twee kaarten overeenkomen, worden ze groen */
+.kaart.voorkant.goed {
+    background-color: lightgreen;
+}
+
+/* Als twee kaarten niet overeenkomen, worden ze rood */
+.kaart.voorkant.fout {
+    background-color: red;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Bom spel</title>
+</head>
+<body>
+<!-- Het speelveld: alles speelt zich hier af -->
+<div id="playField">
+
+    <!-- De startknop, verdwijnt zodra het spel begint -->
+    <button id="btnStart">START</button>
+
+    <!-- De score die ik bijhoud en toon aan de speler -->
+    Aantal hits <span class="score">0</span>
+
+    <!-- Het doelwit: ik verplaats dit icoontje telkens via JavaScript -->
+    <img src="images/0.png" class="bom" id="target" alt="sprite">
+
+</div>
+<!-- Ik laad het script onderaan zodat de HTML al klaar is als het script start -->
+<script src="scripts/code.js"></script>
+</body>
+</html>
