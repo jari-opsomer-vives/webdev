@@ -195,6 +195,58 @@ section p strong { color: var(--text); font-weight: 600; }
     top: 0.05em;
 }
 
+/* ─── LABO DETAIL: .labo-bestanden (nested files) ───── */
+.labo-bestanden {
+    list-style: none;
+    padding: 0;
+    margin: 0.3rem 0 0.1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.labo-opdrachten .labo-bestanden li {
+    font-size: 0.76rem;
+    padding-left: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+.labo-opdrachten .labo-bestanden li::before {
+    content: '◦';
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    top: 0.05em;
+}
+.labo-bestanden a {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.74rem;
+    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.labo-bestanden a:hover { color: var(--accent); }
+.labo-bestanden a.bestand-css::before,
+.labo-bestanden a.bestand-js::before {
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.08rem 0.3rem;
+    border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    flex-shrink: 0;
+}
+.labo-bestanden a.bestand-css::before {
+    content: 'CSS';
+    background: #ede9fe;
+    color: #5b21b6;
+}
+.labo-bestanden a.bestand-js::before {
+    content: 'JS';
+    background: #dcfce7;
+    color: #166534;
+}
+
 /* ─── LABO TABLE (fallback for detail pages) ────────── */
 .labo-table {
     width: 100%;
