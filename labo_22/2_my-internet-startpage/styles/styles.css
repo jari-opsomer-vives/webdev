@@ -1,0 +1,133 @@
+/* =============================================
+   My Internet Start Page — eigen stijlen
+   Bootstrap zorgt voor de basisstijlen.
+   Hier passen we alleen specifieke dingen aan.
+   ============================================= */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ---- Zoekbalk & knop ---- */
+
+#command-input {
+    font-size: 1rem;
+    border: 1.5px solid #ced4da;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+}
+
+/* Blauw randje als het veld geselecteerd is */
+#command-input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+#go-button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+/* ---- History cards ---- */
+
+/* Elke card neemt op kleine schermen de volledige breedte in,
+   op grotere schermen krijg je 3 cards naast elkaar (Bootstrap col). */
+.zoek-card {
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Titel in de card (naam van de zoekmachine) */
+.zoek-card .card-naam {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* De zoekopdracht zelf */
+.zoek-card .card-query {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    opacity: 0.9;
+}
+
+/* De "Go!"-link in de card */
+.zoek-card .card-link {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: background-color 0.2s;
+}
+
+.zoek-card .card-link:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+    color: #fff;
+}
+
+/* ---- Foutmelding popup ---- */
+
+/* Donkere achtergrond over de hele pagina */
+.popup-overlay {
+    position: fixed;
+    inset: 0;                        /* top/right/bottom/left = 0 */
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+}
+
+/* De witte popup zelf, gecentreerd op het scherm */
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 28px;
+    z-index: 1001;
+    min-width: 280px;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Rode sluitknop rechtsboven in de popup */
+.popup-sluit-btn {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-sluit-btn:hover {
+    background: #bb2d3b;
+}

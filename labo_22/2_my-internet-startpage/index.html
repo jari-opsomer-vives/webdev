@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Internet Start Page</title>
+
+    <!-- Bootstrap 5 CSS voor layout en componenten -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Eigen stijlbestand -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+<!-- Alles zit in een Bootstrap container voor een nette centrering -->
+<div class="container mt-4">
+
+    <!-- Bovenste sectie: zoekbalk en knop -->
+    <section id="zoek-sectie">
+        <h1 class="mb-3">My Internet Start Page</h1>
+
+        <label for="command-input" class="form-label fw-semibold">Zoekopdracht</label>
+        <input
+                type="text"
+                id="command-input"
+                class="form-control mb-1"
+                placeholder="Enter commando"
+                autocomplete="off"
+        >
+        <!-- Kleine hint tekst onder het invoerveld -->
+        <small class="text-muted d-block mb-3">
+            Start your commando with "/[character] [zoekopdracht]"
+        </small>
+
+        <button id="go-button" class="btn btn-success w-100 mb-4">GO!</button>
+    </section>
+
+    <!-- Onderste sectie: history van zoekopdrachten -->
+    <section id="history-sectie">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="mb-0">History</h2>
+            <!-- Sorteerknop, tekst wordt via JS aangepast -->
+            <button id="sort-btn" class="btn btn-outline-secondary btn-sm">Sort: A → Z</button>
+        </div>
+
+        <!-- Bootstrap row: cards worden hier dynamisch ingevoegd door JavaScript -->
+        <div id="cards-container" class="row g-3"></div>
+    </section>
+</div>
+
+<!-- Popup container: wordt leeg gelaten, JS vult dit in bij een fout -->
+<div id="popup-overlay" class="popup-overlay d-none"></div>
+<div id="popup-box" class="popup-box d-none">
+    <div class="popup-header">
+        <h5 id="popup-titel" class="mb-0">Fout</h5>
+        <button id="popup-sluit" class="popup-sluit-btn">&times;</button>
+    </div>
+    <p id="popup-bericht" class="mt-2 mb-0"></p>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Eigen JavaScript -->
+<script src="scripts/code.js"></script>
+</body>
+
+</html>
