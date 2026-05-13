@@ -1,7 +1,8 @@
 /* =============================================
    My Internet Start Page — JavaScript
 
-   Aanpak: ik gebruik gewone functies (geen class).
+   Aanpak: ik gebruik geen function-declaraties.
+   Alle logica staat in const/let met arrow functions.
    Alle data bewaar ik in localStorage zodat de
    history bewaard blijft na een refresh.
    ============================================= */
@@ -56,51 +57,52 @@ const ZOEKMACHINES = [
     }
 ];
 
-// Sorteervolgorde: true = A→Z, false = Z→A
-// We laden de vorige keuze uit localStorage, of starten standaard op A→Z
-let sorteerOplopend = laadSortering();
-
 
 // =============================================
 // LOCALSTORAGE HULPFUNCTIES
 // =============================================
 
 // Bewaar een waarde (als JSON) in localStorage
-function bewaarInStorage(sleutel, waarde) {
+const bewaarInStorage = (sleutel, waarde) => {
     localStorage.setItem(sleutel, JSON.stringify(waarde));
-}
+};
 
 // Haal een waarde op uit localStorage en zet het terug naar een JS-object
 // Geeft null terug als de sleutel niet bestaat
-function laadUitStorage(sleutel) {
+const laadUitStorage = (sleutel) => {
     const data = localStorage.getItem(sleutel);
     return data ? JSON.parse(data) : null;
-}
+};
 
 // Laad de hele history-array uit localStorage
 // Als er nog niets bewaard is, geef een lege array terug
-function laadHistory() {
+const laadHistory = () => {
     return laadUitStorage(STORAGE_KEY_HISTORY) ?? [];
-}
+};
 
 // Voeg één item toe aan de bestaande history en sla alles opnieuw op
-function slaHistoryItemOp(item) {
+const slaHistoryItemOp = (item) => {
     const history = laadHistory();
     history.push(item);
     bewaarInStorage(STORAGE_KEY_HISTORY, history);
-}
+};
 
 // Laad de opgeslagen sorteervolgorde
 // Als nog nooit opgeslagen, gebruik de standaard (A→Z = true)
-function laadSortering() {
+const laadSortering = () => {
     const opgeslagen = laadUitStorage(STORAGE_KEY_SORTERING);
     return opgeslagen !== null ? opgeslagen : true;
-}
+};
 
 // Bewaar de huidige sorteervolgorde
-function bewaarSortering() {
+const bewaarSortering = () => {
     bewaarInStorage(STORAGE_KEY_SORTERING, sorteerOplopend);
-}
+};
+
+// Sorteervolgorde: true = A→Z, false = Z→A
+// We laden de vorige keuze uit localStorage, of starten standaard op A→Z
+// Let op: staat NA laadSortering zodat die const al bekend is
+let sorteerOplopend = laadSortering();
 
 
 // =============================================
@@ -108,17 +110,17 @@ function bewaarSortering() {
 // =============================================
 
 // Toon een foutmelding in de popup
-function toonFout(bericht) {
+const toonFout = (bericht) => {
     document.getElementById("popup-bericht").textContent = bericht;
     document.getElementById("popup-overlay").classList.remove("d-none");
     document.getElementById("popup-box").classList.remove("d-none");
-}
+};
 
 // Sluit en verberg de popup
-function sluitPopup() {
+const sluitPopup = () => {
     document.getElementById("popup-overlay").classList.add("d-none");
     document.getElementById("popup-box").classList.add("d-none");
-}
+};
 
 
 // =============================================
@@ -127,13 +129,13 @@ function sluitPopup() {
 
 // Haal de zoekmachine op op basis van de prefix (bv. "g" → Google-object)
 // Geeft null terug als de prefix onbekend is
-function zoekMachineOpPrefix(prefix) {
+const zoekMachineOpPrefix = (prefix) => {
     return ZOEKMACHINES.find(zm => zm.prefix === prefix) ?? null;
-}
+};
 
 // Controleer het ingevoerde commando en geef de zoekmachine + zoekopdracht terug
-// Gooit een fout (en toont popup) als het commando ongeldig is
-function verwerkCommando(invoer) {
+// Geeft null terug (en toont popup) als het commando ongeldig is
+const verwerkCommando = (invoer) => {
     // Commando moet starten met een slash
     if (!invoer.startsWith("/")) {
         toonFout('Ongeldig commando: start je commando met "/[letter] [zoekopdracht]"');
@@ -169,7 +171,7 @@ function verwerkCommando(invoer) {
         query: zoekopdracht,
         url: url
     };
-}
+};
 
 
 // =============================================
@@ -178,7 +180,7 @@ function verwerkCommando(invoer) {
 
 // Voeg één card toe aan de container in de HTML
 // Elke card krijgt de Bootstrap col-klassen zodat het grid werkt
-function voegCardToe(item) {
+const voegCardToe = (item) => {
     const container = document.getElementById("cards-container");
 
     // Bootstrap kolom: 12 breed op xs, 6 op sm, 4 op md (= 3 per rij op desktop)
@@ -214,11 +216,11 @@ function voegCardToe(item) {
     card.appendChild(link);
     kolom.appendChild(card);
     container.appendChild(kolom);
-}
+};
 
 // Haal alle history op, sorteer ze, en toon ze opnieuw
 // We leegmaken we eerst de container zodat we niet dubbel tonen
-function herlaadCards() {
+const herlaadCards = () => {
     const container = document.getElementById("cards-container");
     container.innerHTML = "";   // Leegmaken
 
@@ -238,7 +240,7 @@ function herlaadCards() {
 
     // Elke card toevoegen aan de pagina
     history.forEach(item => voegCardToe(item));
-}
+};
 
 
 // =============================================
@@ -246,18 +248,18 @@ function herlaadCards() {
 // =============================================
 
 // Wissel de sorteervolgorde om en pas de knoptekst aan
-function wisselSortering() {
+const wisselSortering = () => {
     sorteerOplopend = !sorteerOplopend;
     bewaarSortering();
     updateSorteerKnop();
     herlaadCards();
-}
+};
 
 // Pas de tekst van de sorteerknop aan zodat het overeenkomt met de huidige volgorde
-function updateSorteerKnop() {
+const updateSorteerKnop = () => {
     const knop = document.getElementById("sort-btn");
     knop.textContent = sorteerOplopend ? "Sort: A → Z" : "Sort: Z → A";
-}
+};
 
 
 // =============================================
@@ -265,7 +267,7 @@ function updateSorteerKnop() {
 // =============================================
 
 // Alles wat er gebeurt als de gebruiker op GO! drukt (of Enter indrukt)
-function verwerkGo() {
+const verwerkGo = () => {
     const invoerVeld = document.getElementById("command-input");
     const invoer = invoerVeld.value.trim();
 
@@ -282,7 +284,7 @@ function verwerkGo() {
 
     // Invoerveld leegmaken
     invoerVeld.value = "";
-}
+};
 
 
 // =============================================
